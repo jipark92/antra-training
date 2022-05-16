@@ -89,7 +89,7 @@ form {
 .register-text{
     background: rgb(3, 128, 170);
     padding: 0 0.3rem 0 0.3rem;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
 }
 
@@ -98,6 +98,11 @@ input {
     padding: 0.6rem;
     border-radius: 5px;
     border: 1px solid gray;
+}
+
+input:hover{
+    box-shadow: 0px 0px 10px rgb(137, 197, 218);
+    border: 1px solid rgb(137, 197, 218);
 }
 
 .buttons-container{
@@ -119,9 +124,21 @@ button{
     background-color: rgb(3, 128, 170);
 }
 
+.register-btn:hover{
+    background-color: rgb(5, 159, 211);
+}
+
 .signin-btn{
     color: white;
     background-color: green;
+}
+
+.signin-btn:hover{
+    background-color: rgb(2, 172, 2);
+}
+
+label{
+    width: 100%;
 }
 
 
