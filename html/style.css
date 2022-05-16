@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container{
+    margin-bottom: 1rem;
+}
+
+form {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 450px;
+}
+
+.name-container{
+    display: flex;
+    /* border: 1px solid green; */
+    /* justify-content: space-between; */
+    gap: 1rem;
+    width: 100%;
+}
+
+.name-container div {
+    width: 100%;
+}
+
+.mobile-container{
+    width: 100%;
+}
+
+.email-container{
+    width :100%;
+}
+
+.password-container{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.password-container div {
+    width: 100%;
+}
+
+.tos-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tos-container div:nth-child(1){
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+
+}
+
+.tos-container div:nth-child(2){
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.tos-container a{
+    text-decoration: none;
+}
+
+.register-text{
+    background: rgb(3, 128, 170);
+    padding: 0 0.3rem 0 0.3rem;
+    border-radius: 5px;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.buttons-container{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    /* border: 1px solid green; */
+}
+
+button{
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.register-btn{
+    color: white;
+    background-color: rgb(3, 128, 170);
+}
+
+.signin-btn{
+    color: white;
+    background-color: green;
+}
+
+
+@media (max-width: 250px ){
+    .name-container{
+        flex-direction: column;
+    }
+
+    .password-container{
+        flex-direction: column;
+    }
+
+    .tos-container{
+        flex-direction: column;
+    }
+
+    .tos-container div:nth-child(1){
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons-container{
+        flex-direction: column;
+    }
+}
