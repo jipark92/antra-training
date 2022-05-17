@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="title-container">
+    <main class="main-container">
+        <header class="title-container">
             <h1>Sign Up</h1>
-        </div>
+        </header>
         <form action="#" method="#post">
-            <div class="name-container">
+            <section class="name-container">
                 <div>
                     <label for="first-name"></label>
                     <input type="text" id="first-name" name="first-name" placeholder="First Name" required/>
@@ -22,19 +22,19 @@
                     <label for="last-name"></label>
                     <input type="text" id="last-name" name="last-name" placeholder="Last Name" required/>
                 </div>
-            </div>
+            </section>
 
-            <div class="mobile-container">
+            <section class="mobile-container">
                 <label for="mobile"></label>
                 <input type="text" id="mobile" name="mobile" placeholder="Mobile No." minlength="10" maxlength="10" required/>
-            </div>
+            </section>
 
-            <div class="email-container">
+            <section class="email-container">
                 <label for="email"></label>
                 <input type="email" id="email" name="email" placeholder="Email Address" required/>
-            </div>
+            </section>
 
-            <div class="password-container">
+            <section class="password-container">
                 <div>
                     <label for="password"></label>
                     <input type="password" id="password" name="password" placeholder="Password" required/>
@@ -43,23 +43,23 @@
                     <label for="confirm-password"></label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required/>
                 </div>
-            </div>
+            </section>
 
-            <div class="tos-container">
+            <section class="tos-container">
                 <div>
                     <input type="checkbox" name="tos" id="tos"/>
                     <label for="tos"><b>I Agree</b></label>
                 </div>
                 <div>
-                    <p>By clicking <span class="register-text">Register</span>, you agree to the <a href="#">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
+                    <p>By clicking <span class="register-text">Register</span>, you agree to the <a href="#" target="_blank">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="buttons-container">
+            <section class="buttons-container">
                 <button type="submit" class="register-btn">Register</button>
                 <button class="signin-btn">Sign In</button>
-            </div>
+            </section>
         </form>
-    </div>
+    </main>
 </body>
 </html>
