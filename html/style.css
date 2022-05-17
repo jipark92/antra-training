@@ -26,7 +26,7 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width:75%;
+    width:50%;
 }
 
 .name-container{
@@ -59,7 +59,7 @@ form {
 
 .tos-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
@@ -85,6 +85,8 @@ form {
 
 #tos{
     cursor: pointer;
+    padding: 0;
+    width: 25px;
 }
 
 .register-text{
