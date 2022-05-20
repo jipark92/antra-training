@@ -25,15 +25,18 @@ nav a{
     color: gray;
 }
 
+nav h1{
+    font-size: 2rem;
+}
+
 .content-container{
     display: flex;
     gap: 1rem;
 
     width: 100%;
     min-height: 100vh;
-    padding: 3rem;
+    padding: 2rem;
 }
-
 
 article{
     width: 75%;
@@ -65,6 +68,10 @@ article{
 
 .blogpost-container div:nth-child(2) p:nth-child(3){
     border: 1px solid gray;
+}
+
+.author-text{
+    color:gray;
 }
 
 .heading-container{
@@ -118,6 +125,7 @@ article{
 .older-newer-btn{
     display:flex;
     gap: 1rem;
+    margin-top: 4rem;
 }
 
 .older-btn{
