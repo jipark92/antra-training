@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-container{
+
+    border: 5px solid red;
+
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    min-width: 300px;
+    margin-bottom: 2rem;
+    height: 5%;
+    padding: 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.content-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border: 3px solid black;
+}
+
+
+article{
+    border: 3px solid green;
+
+    width: 75%;
+}
+
+
+img{
+    height: 25px;
+    width: 25px;
+}
