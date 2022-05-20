@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.title-container{
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+.blog-containter{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    padding: 1rem;
+    border: 5px solid lightgray;
+}
+
+.card-container:nth-child(odd) p:nth-child(1) {
+    color: rgb(4, 155, 248);
+    font-weight: 1000
+}
+
+.card-container:nth-child(even) p:nth-child(1) {
+    color: green;
+    font-weight: 1000
+}
+
+img {
+    height: 25px;
+    width: 25px;
+}
