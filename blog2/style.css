@@ -4,14 +4,10 @@
     box-sizing: border-box;
 }
 
-.main-container{
-    /* border: 5px solid red; */
-}
-
 .title-container{
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid black; */
+
     height: 5%;
     padding: 1rem;
 }
@@ -20,6 +16,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     width: 100%;
     padding: 0 1rem 0 1rem;
 }
@@ -31,25 +28,28 @@ nav a{
 .content-container{
     display: flex;
     gap: 1rem;
+
     width: 100%;
     min-height: 100vh;
-    /* border: 3px solid black; */
     padding: 3rem;
 }
 
 
 article{
-    /* border: 3px solid green; */
     width: 75%;
     min-height: 100%;
 }
 
 .blogpost-container{
-    /* border: 2px solid blue; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     margin-bottom: 1rem;
+}
+
+.blogpost-container h1{
+    font-size: 2rem;
 }
 
 .blogpost-container div:nth-child(2){
@@ -71,26 +71,40 @@ article{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     margin-bottom: 1rem;
+}
+
+.heading-container h1{
+    font-size: 1.8rem;
 }
 
 .sub-heading-container{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     margin-bottom: 1rem;
+}
+
+.sub-heading-container h1{
+    font-size: 1.5rem;
 }
 
 .sub-heading-container p:nth-child(3){
     border: 1px solid gray;
 }
 
-
 .sub-heading-container-2{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     margin-bottom: 1rem;
+}
+
+.sub-heading-container-2 h1{
+    font-size: 1.5rem;
 }
 
 .sub-heading-container-2 ul{
@@ -120,29 +134,11 @@ article{
     color: gray;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 aside{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* border: 3px solid blue; */
+
     width: 25%;
 }
 
@@ -181,7 +177,3 @@ img{
     height: 25px;
     width: 25px;
 }
-
-/* li{
-    list-style-type: none;
-} */
