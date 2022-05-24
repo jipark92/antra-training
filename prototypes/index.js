@@ -31,12 +31,11 @@ console.log(reduceResult);// 796 total
 //MY SOME METHOD
 Array.prototype.MySome = function(cbf) {
     for (let i = 0 ; i < this.length; i++ ){
-        if( typeof(this[i]) === typeof(this) ) {
+        if( typeof(this[i]),i, this ) {
             return true
-        } else {
-            return false
         }
     }
+    return false
 }
-const someResult = arr.MySome(arr < 5 )
+const someResult = arr.MySome(arr > 5 )
 console.log(someResult) // true
