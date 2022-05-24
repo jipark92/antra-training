@@ -31,10 +31,10 @@ console.log(reduceResult);// 796 total
 //MY SOME METHOD
 Array.prototype.MySome = function(cbf) {
     for (let i = 0 ; i < this.length; i++ ){
-        if(this[i], i,this){
+        if(this[i]){
             return true
         } else {
-            false
+            return false
         }
     }
 }
