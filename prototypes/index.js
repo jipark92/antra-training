@@ -38,4 +38,4 @@ Array.prototype.MySome = function(cbf) {
     return false
 }
 const someResult = arr.MySome(arr => arr > 595 )
-console.log(someResult) // true
+console.log(someResult) // false (because there is no number higher than 595)
