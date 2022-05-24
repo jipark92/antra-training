@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    border: 1px solid black;
+    width: 750px;
+}
+
+.header-container input {
+    border: 1px solid black;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.header-container button{
+    border: 1px solid black;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.header-container button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.list-container{
+    border: 1px solid black;
+    width: 750px;
+    height: 750px;
+}
