@@ -38,5 +38,5 @@ Array.prototype.MySome = function(cbf) {
         }
     }
 }
-const someResult = arr.MySome(arr > 0 )
+const someResult = arr.MySome(arr => arr > 0 )
 console.log(someResult) // true
