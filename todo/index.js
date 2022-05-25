@@ -17,17 +17,19 @@ const renderData = (res) =>{
 
 const createList = (res) => {
     for (let i = 0; i<res.length;i++){
+        const details = document.createElement('p')
+        details.setAttribute('class','details')
+        infoContainer.appendChild(details)
+
         const list = document.createElement('p')
         list.setAttribute('class', 'list')
-        infoContainer.appendChild(list)
+        details.appendChild(list)
     
         const status = document.createElement('p')
         status.setAttribute('class', 'status')
-        infoContainer.appendChild(status)
+        details.appendChild(status)
     
-        
-        list.textContent = `#${res[i].userId} ${res[i].title}`
-        status.textContent = res[i].completed
+        list.textContent = `#${res[i].userId} Title: ${res[i].title.toUpperCase()}`
+        status.textContent = `Complete Status: ${res[i].completed}`
     }
 }
-
