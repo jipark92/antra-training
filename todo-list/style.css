@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: 'Merriweather', serif;}
 
 .todo-container{
     display: flex;
@@ -12,6 +13,7 @@
 
     height: 100vh;
     width: 100vw;
+    background-color: aqua;
 }
 
 .header-container{
@@ -29,18 +31,16 @@
     font-size: 1.4rem;
     padding: 1rem;
     text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .header-container button{
     border: 1px solid black;
     font-size: 1.4rem;
     padding: 1rem;
-}
-
-.header-container button:hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .list-container{
@@ -73,19 +73,35 @@
     padding: 1rem;
 }
 
+.footer-container a{
+    color: black;
+}
+
 .footer-container button{
     border: 1px solid black;
     font-size: 1.4rem;
     padding: 1rem;
 }
 
-.footer-container button:hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
 .delete-btn {
     padding: 0.6rem;
     font-weight: 1000;
+}
+
+.delete-all-container{
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 1rem;
+}
+
+.delete-all-container button{
+    border: 1px solid black;
+    width: 75px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }

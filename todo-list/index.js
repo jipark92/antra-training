@@ -28,6 +28,20 @@ const clearInputValue = () =>{
     toDoValue.value = "";
 }
 
+const deleteAll = () =>{
+    deleteAllBtn.addEventListener('click',()=>{
+        const allListContainer = document.querySelectorAll('.list')
+        for(let i = 0; i < toDoList.length;i++){
+            toDoList.splice(i,toDoList.length)
+            console.log(toDoList)
+        }
+        allListContainer.forEach(list=>{
+            list.remove()
+        })
+    })
+}
+deleteAll()
+
 //CREATE HTML ELEMENTS(LIST AND DELETE BUTTON)
 const createList = () =>{
     //create list container and grabs attribute values
