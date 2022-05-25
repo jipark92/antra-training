@@ -3,20 +3,25 @@ const addToDoBtn = document.querySelector('.add-todo')
 const listContainer = document.querySelector('.list-container')
 const deleteAllBtn = document.querySelector('.delete-all-btn')
 
+//todo list array
 const toDoList = []
+//ID to associate array and specifc todo.
 let toDoID = 0;
 
+//submit todo function
 const addToDo = () =>{
     addToDoBtn.addEventListener('click',()=>{
-        if(toDoValue.value === "" || toDoValue.value === null)return
+        //if input box is empty, do nothing.
+        if(toDoValue.value === "")return
+        //else run these functions
         getToDoValue()
         createList()
         clearInputValue()
-        console.log(toDoList)
     })
 }
 addToDo()
 
+//grab value inside the input box and submit object into array
 const getToDoValue = () =>{
     toDoList.push({
         id: toDoID++,
@@ -24,17 +29,21 @@ const getToDoValue = () =>{
     })
 }
 
+//clears input box after submitting value
 const clearInputValue = () =>{
     toDoValue.value = "";
 }
 
+//deleta all function
 const deleteAll = () =>{
     deleteAllBtn.addEventListener('click',()=>{
+        //grab all lists 
         const allListContainer = document.querySelectorAll('.list')
+        //loops through all toDoList and removes them from array
         for(let i = 0; i < toDoList.length;i++){
             toDoList.splice(i,toDoList.length)
-            console.log(toDoList)
         }
+        //select list containers and remove them
         allListContainer.forEach(list=>{
             list.remove()
         })
@@ -68,8 +77,6 @@ const createList = () =>{
 
     //delete function
     deleteBtn.addEventListener('click',()=>{
-        console.log(listID)
-        console.log(list)
         for (let i = 0; i < toDoList.length;i++){
             if(parseInt(listID) === toDoList[i].id){
                 toDoList.splice(i,1)
