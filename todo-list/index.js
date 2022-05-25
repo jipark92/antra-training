@@ -1,6 +1,7 @@
 const toDoValue = document.querySelector('.todo-value')
 const addToDoBtn = document.querySelector('.add-todo')
 const listContainer = document.querySelector('.list-container')
+const deleteAllBtn = document.querySelector('.delete-all-btn')
 
 const toDoList = []
 let toDoID = 0;
