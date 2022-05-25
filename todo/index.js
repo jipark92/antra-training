@@ -1,4 +1,3 @@
-const getButton = document.querySelector('.fetch-todo')
 const infoContainer = document.querySelector('.info-container')
 
 const toDoData = () =>{ 
