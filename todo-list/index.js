@@ -43,7 +43,7 @@ const createList = () =>{
     const toDoTitle = document.createElement('p')
     list.appendChild(toDoTitle)
     for(let i=0; i<toDoList.length;i++){
-        toDoTitle.textContent = `#${toDoList[i].id} ${toDoList[i].title}`
+        toDoTitle.textContent = `#${toDoList[i].id}. ${toDoList[i].title}`
     }
 
     //create delete button element
