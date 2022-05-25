@@ -29,7 +29,7 @@ const createList = (res) => {
         status.setAttribute('class', 'status')
         details.appendChild(status)
     
-        list.textContent = `#${res[i].userId} Title: ${res[i].title.toUpperCase()}`
+        list.textContent = `Title: ${res[i].title.toUpperCase()}`
         status.textContent = `Complete Status: ${res[i].completed}`
     }
 }
