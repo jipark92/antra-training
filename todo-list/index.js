@@ -15,7 +15,7 @@ const addToDo = () =>{
         if(toDoValue.value === "")return
         //else run these functions
         getToDoValue()
-        createList()
+        createListWithButtons()
         clearInputValue()
     })
 }
@@ -47,12 +47,14 @@ const deleteAll = () =>{
         allListContainer.forEach(list=>{
             list.remove()
         })
+        //reset ID to 0
+        toDoID = 0
     })
 }
 deleteAll()
 
 //CREATE HTML ELEMENTS(LIST AND DELETE BUTTON)
-const createList = () =>{
+const createListWithButtons = () =>{
     //create list container and grabs attribute values
     const list = document.createElement('div')
     list.setAttribute('class', 'list')
@@ -75,7 +77,7 @@ const createList = () =>{
     list.appendChild(deleteBtn)
     deleteBtn.textContent = "DELETE"
 
-    //delete function
+    //delete event listener
     deleteBtn.addEventListener('click',()=>{
         for (let i = 0; i < toDoList.length;i++){
             if(parseInt(listID) === toDoList[i].id){
@@ -84,5 +86,7 @@ const createList = () =>{
             }
             list.remove()
         }
+        //decrease id on every delete to reset back to 0.
+        toDoID--
     })
 }
