@@ -21,6 +21,10 @@ const createList = (res) => {
         details.setAttribute('class','details')
         infoContainer.appendChild(details)
 
+        const taskNumber = document.createElement('p')
+        taskNumber.setAttribute('class', 'task-number')
+        details.appendChild(taskNumber)
+
         const list = document.createElement('p')
         list.setAttribute('class', 'list')
         details.appendChild(list)
@@ -29,6 +33,7 @@ const createList = (res) => {
         status.setAttribute('class', 'status')
         details.appendChild(status)
     
+        taskNumber.textContent = `#${res[i].id}`
         list.textContent = `Title: ${res[i].title.toUpperCase()}`
         status.textContent = `Complete Status: ${res[i].completed}`
     }
