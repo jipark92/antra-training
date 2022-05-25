@@ -3,42 +3,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;}
+    font-family: 'Merriweather', serif;
+}
 
-.todo-container{
+.main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
     width: 100vw;
-    background-color: aqua;
+    min-height: 100vh;
+    background-color: rgb(130, 131, 125);
 }
 
 .header-container{
+    margin-bottom: 1rem;
+}
+
+.todo-container{
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    width:75%;
+    height: 85%;
+}
+
+.input-container{
     display: flex;
     justify-content: center;
     align-items: center;
 
+    width: 100%;
     padding: 1rem;
-    border: 1px solid black;
-    width: 750px;
+    border-bottom: 3px solid white;
 }
 
-.header-container input {
-    border: 1px solid black;
-    font-size: 1.4rem;
+.input-container input {
+    width: 100%;
     padding: 1rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.header-container button{
-    border: 1px solid black;
-    font-size: 1.4rem;
+.input-container button{
     padding: 1rem;
+    font-size: 1.4rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -48,10 +59,10 @@
     flex-direction: column;
     gap: 1rem;
 
-    border: 1px solid black;
-    width: 750px;
+    width: 100%;
     height: 750px;
-    padding: 1rem;
+    padding: 1rem;    
+    overflow-y: scroll;
 }
 
 .list {
@@ -59,8 +70,8 @@
     justify-content: space-between;
     align-items: center;
 
-    border: 1px solid black;
     padding: 1rem;
+    border: 2px inset white;
 }
 
 .footer-container{
@@ -68,8 +79,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 750px;
-    border: 1px solid black;
+    width: 100%;
     padding: 1rem;
 }
 
@@ -78,14 +88,13 @@
 }
 
 .footer-container button{
-    border: 1px solid black;
-    font-size: 1.4rem;
     padding: 1rem;
+    font-size: 1.4rem;
+    border: 1px solid black;
 }
 
 .delete-btn {
     padding: 0.6rem;
-    font-weight: 1000;
 }
 
 .delete-all-container{
@@ -96,8 +105,8 @@
 }
 
 .delete-all-container button{
-    border: 1px solid black;
     width: 75px;
+    border: 1px solid black;
 }
 
 button:hover{
