@@ -4,7 +4,6 @@ const toDoData = () =>{
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(res=>res.json())
     .then(res=>{
-        console.log(res)
         createList(res)
     })
 }
