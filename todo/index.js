@@ -5,14 +5,10 @@ const toDoData = () =>{
     .then(res=>res.json())
     .then(res=>{
         console.log(res)
-        renderData(res)
+        createList(res)
     })
 }
 toDoData()
-
-const renderData = (res) =>{
-    createList(res)
-}
 
 const createList = (res) => {
     for (let i = 0; i<res.length;i++){
