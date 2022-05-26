@@ -14,7 +14,7 @@ toDoData()
 
 const createList = (res) => {
     for (let i = 0; i<res.length;i++){
-        const details = document.createElement('p')
+        const details = document.createElement('div')
         details.setAttribute('class','details')
         infoContainer.appendChild(details)
 
