@@ -6,6 +6,9 @@ const toDoData = () =>{
     .then(res=>{
         createList(res)
     })
+    .catch((err)=>{
+        console.log('error: refresh pls')
+    })
 }
 toDoData()
 
