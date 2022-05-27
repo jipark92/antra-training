@@ -54,7 +54,9 @@ const renderDisplay = () =>{
 
 //show "loading album" before api is fetched and displayed
 const loadingScreen = () =>{
-    contentContainer.innerHTML = "Loading Album..."
+    contentContainer.innerHTML = `<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+
+    `
 }
 
 //delete button to remove specific album from your screen
@@ -66,7 +68,6 @@ const deleteAlbumBtn = () =>{
             for (let i = 0; i < array.length;i++){
                 if(+e.target.id === array[i].collectionId){
                     array.splice(i,1)
-                    console.log(array)
                 }
             }
             let newRender = array.map(arr=>{

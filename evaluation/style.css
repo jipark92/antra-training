@@ -24,23 +24,31 @@
 }
 
 .input-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
     padding: 1rem;
 }
 
 .input-container input {
     border: 1px solid black;
     font-size: 1.4rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .input-container button{ 
     border: 1px solid black;
     font-size: 1.4rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.inputr-container button:hover{ 
+.input-container button:hover{ 
     background-color: black;
     color: white;
 }
@@ -55,13 +63,13 @@
     height: 84vh;
     padding: 1rem;
     overflow-y: auto;
-    /* border: 3px solid black; */
 }
 
 .album-info-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
 
     max-height: 50%;
     max-width: 200px;
@@ -86,10 +94,17 @@ li{
     background-color: skyblue;
 }
 
-@media (max-width: 420px){
-    .input-container input,button{
+@media (max-width: 480px){
+    .input-container input{
         width: 100%;
+        border-radius: 5px;
     }
+
+    .input-container button{
+        width: 100%;
+        border-radius: 5px;
+    }
+
     .album-info-container{
         max-width: 160px;
         max-height: 100%;
