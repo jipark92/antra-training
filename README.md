@@ -6,4 +6,4 @@ Blog2 DEMO: https://jipark-antra-blog2.netlify.app/
 
 Todo List API DEMO: https://atnra-todo-api.netlify.app/
 
-Evaluation: https://antra-evaluation.netlify.app/
+Evaluation DEMO: https://antra-evaluation.netlify.app/
