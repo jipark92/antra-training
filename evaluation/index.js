@@ -7,7 +7,7 @@ let array = []
 
 //get api data
 const getData = (artist) => {
-    fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
+    fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`,{mode: 'cors'})
     .then(res=>res.json())
     .then(res=>{
         array = res.results
@@ -60,22 +60,23 @@ const loadingScreen = () =>{
 //delete button to remove specific album from your screen
 const deleteAlbumBtn = () =>{
     const deleteBtn = document.querySelectorAll('.delete-btn')
-    deleteBtn.forEach(item=>{
-        item.addEventListener('click',(e)=>{
-            let newArray = [...array]
-            for (let i = 0; i < newArray.length;i++){
-                if(+e.target.id === newArray[i].collectionId){
-                    newArray.splice(i,1)
+    deleteBtn.forEach(btn=>{
+        btn.addEventListener('click',(e)=>{
+            array = [...array]
+            for (let i = 0; i < array.length;i++){
+                if(+e.target.id === array[i].collectionId){
+                    array.splice(i,1)
+                    console.log(array)
                 }
             }
-            let newRender = newArray.map(newArr=>{
+            let newRender = array.map(arr=>{
                 return (`<div class="album-info-container"> 
                             <ul>
-                                <li><img src="${newArr.artworkUrl60}" alt="album-picture" class="album-img"/>
-                                <li>Artist: <b style="color:green">${newArr.artistName}</b></li>
-                                <li>Album Name: <b style="color:red">${newArr.collectionName.toUpperCase()}</b></li>
-                                <li>Album Price: <b style="color:blue">$${newArr.collectionPrice}</b></li>
-                                <li><button class="delete-btn" id="${newArr.collectionId}">Close</button></li>
+                                <li><img src="${arr.artworkUrl60}" alt="album-picture" class="album-img"/>
+                                <li>Artist: <b style="color:green">${arr.artistName}</b></li>
+                                <li>Album Name: <b style="color:red">${arr.collectionName.toUpperCase()}</b></li>
+                                <li>Album Price: <b style="color:blue">$${arr.collectionPrice}</b></li>
+                                <li><button class="delete-btn" id="${arr.collectionId}">Close</button></li>
                             </ul>
                         </div>
                 `)
