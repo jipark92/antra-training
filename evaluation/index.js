@@ -35,11 +35,8 @@ const submit = () =>{
 submit()
 
 const outOf = () =>{
-    
     let resultText = `<h5>${array.length} results for ${inputBox.value}</h5>`
- 
     howMany.innerHTML = resultText
-    console.log(howMany)
 }
 
 
