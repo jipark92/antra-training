@@ -13,6 +13,7 @@ const getData = (artist) => {
     .then(res=>{
         array = res.results
         renderDisplay()
+        outOf()
     })
     .catch(()=>{
         alert('no user found')
@@ -29,7 +30,6 @@ const submit = () =>{
         }
         let artists = inputBox.value
         getData(artists)
-        outOf()
     })
 }
 submit()
