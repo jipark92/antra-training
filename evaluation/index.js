@@ -54,9 +54,7 @@ const renderDisplay = () =>{
 
 //show "loading album" before api is fetched and displayed
 const loadingScreen = () =>{
-    contentContainer.innerHTML = `<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-
-    `
+    contentContainer.innerHTML = `<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`
 }
 
 //delete button to remove specific album from your screen
