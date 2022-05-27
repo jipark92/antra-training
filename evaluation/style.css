@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    background-color: skyblue;
+}
+
+.input-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.input-container input {
+    border: 1px solid black;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.input-container button{ 
+    border: 1px solid black;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.inputr-container button:hover{ 
+    background-color: black;
+    color: white;
+}
+
+.content-container{ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    min-width: 100%;
+    height: 85vh;
+    padding: 1rem;
+    overflow-y: auto;
+    /* border: 3px solid black; */
+}
+
+.album-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-height: 50%;
+    max-width: 200px;
+    border: 2px solid black;
+    box-shadow: 0 0 5px black;
+    padding: 0.5rem;
+}
+
+li{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.album-img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer-container{
+    text-align: center;
+    border-top: 1px solid black;
+    background-color: skyblue;
+}
+
+@media (max-width: 420px){
+    .input-container input,button{
+        width: 100%;
+    }
+    .album-info-container{
+        max-width: 160px;
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 370px){
+    .album-info-container{
+        min-width: 100%;
+    }
+}
