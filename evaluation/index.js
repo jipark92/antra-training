@@ -1,6 +1,7 @@
 const contentContainer = document.querySelector('.content-container')
 const submitBtn = document.querySelector('.submit-button')
 const inputBox = document.querySelector('.input-box')
+const howMany = document.querySelector('.out-of-result-container')
 
 //array/object container
 let array = []
@@ -28,14 +29,25 @@ const submit = () =>{
         }
         let artists = inputBox.value
         getData(artists)
+        outOf()
     })
 }
 submit()
 
+const outOf = () =>{
+    
+    let resultText = `<h5>${array.length} results for ${inputBox.value}</h5>`
+ 
+    howMany.innerHTML = resultText
+    console.log(howMany)
+}
+
+
 //render api on browser screen
 const renderDisplay = () =>{
     let render = array.map(arr=>{
-        return (`<div class="album-info-container"> 
+        return (`
+                <div class="album-info-container"> 
                     <ul>
                         <li><img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
                         <li>Artist: <b style="color:green">${arr.artistName}</b></li>
