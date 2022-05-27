@@ -28,7 +28,6 @@ const submit = () =>{
         }
         let artists = inputBox.value
         getData(artists)
-        // console.log(array)
     })
 }
 submit()
@@ -67,7 +66,6 @@ const deleteAlbumBtn = () =>{
             for (let i = 0; i < newArray.length;i++){
                 if(+e.target.id === newArray[i].collectionId){
                     newArray.splice(i,1)
-                    console.log(newArray)
                 }
             }
             let newRender = newArray.map(newArr=>{
