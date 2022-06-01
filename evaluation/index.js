@@ -10,7 +10,7 @@ let num = albumArray.length - 20
 const showMore = () =>{ 
     showMoreBtn.addEventListener('click',()=>{
         console.log('showmore')
-        if(inputBox.value === "" || albumArray.length === 0)return
+        if(inputBox.value === "" || !albumArray.length)return
 
         if(-num < albumArray.length){
             num = num - 20
@@ -57,8 +57,8 @@ const renderDisplay = () =>{
         return (`
                 <div class="album-info-container"> 
                     <img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
-                    <p>Artist:<b style="color:green">${arr.artistName}</b></p>
-                    <p>Album:<b style="color:green">${arr.collectionName.toUpperCase()}</b></p>
+                    <p>Artist: <b style="color:green">${arr.artistName}</b></p>
+                    <p>Album: <b style="color:green">${arr.collectionName.toUpperCase()}</b></p>
                 </div>
             `)}).splice(0,-num).join('')
 
