@@ -10,7 +10,7 @@ let num = albumArray.length - 20
 const showMore = () =>{ 
     showMoreBtn.addEventListener('click',()=>{
         console.log('show more')
-        if(inputBox.value === "" || !albumArray.length)return
+        if(!inputBox.value || !albumArray.length)return
         if(-num < albumArray.length){
             num = num - 20
         } else{
