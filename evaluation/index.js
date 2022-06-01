@@ -11,7 +11,6 @@ const showMore = () =>{
     showMoreBtn.addEventListener('click',()=>{
         console.log('show more')
         if(inputBox.value === "" || !albumArray.length)return
-
         if(-num < albumArray.length){
             num = num - 20
         } else{
@@ -26,10 +25,6 @@ const getData = (artist) => {
     fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`,{mode: 'cors'})
     .then(res=>res.json())
     .then(res=>{
-        if(inputBox.value === ""){
-            alert("type a artist!")
-            return
-        }
         albumArray = res.results
         renderDisplay()
     })
@@ -41,12 +36,11 @@ const getData = (artist) => {
 const submit = () =>{
     submitBtn.addEventListener('click',()=>{
         console.log('clicked')
-        if(inputBox.value === ""){
+        if(!inputBox.value){
             alert("type a artist!")
             return
         }
         loadingScreen()
-
         let artists = inputBox.value
         getData(artists)
     })
@@ -62,9 +56,7 @@ const renderDisplay = () =>{
                     <p>Album: <b style="color:green">${arr.collectionName}</b></p>
                 </div>
             `)}).splice(0,-num).join('')
-
     contentContainer.innerHTML = render
-
     let resultText = `<h4>${Math.abs(num)} / ${albumArray.length} results for "${inputBox.value.toUpperCase()}"</h4>`
     resultContainer.innerHTML = resultText
 }
@@ -77,6 +69,11 @@ const inputBoxSubmit = () => {
     inputBox.addEventListener('keypress',(e)=>{
         if(e.keyCode === 13){
             console.log('entered')
+            if(!inputBox.value){
+                alert("type a artist!")
+                return
+            }
+            loadingScreen()
             let artists = inputBox.value
             getData(artists)
         }
