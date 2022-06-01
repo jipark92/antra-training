@@ -48,6 +48,8 @@ const submit = () =>{
 
         let artists = inputBox.value
         getData(artists)
+
+        num = albumArray.length - 20
     })
 }
 submit()
