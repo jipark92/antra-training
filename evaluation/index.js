@@ -58,7 +58,7 @@ const renderDisplay = () =>{
                     <p>Artist:<b style="color:green">${arr.artistName}</b></p>
                     <p>Album:<b style="color:green">${arr.collectionName.toUpperCase()}</b></p>
                 </div>
-            `)}).splice(num).join('')
+            `)}).splice(0,-num).join('')
 
     contentContainer.innerHTML = render
 
