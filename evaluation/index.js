@@ -3,13 +3,13 @@ const submitBtn = document.querySelector('.submit-button')
 const inputBox = document.querySelector('.input-box')
 const resultContainer = document.querySelector('.result-container')
 
-let array = []
+let albumArray = []
 
 const getData = (artist) => {
     fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`,{mode: 'cors'})
     .then(res=>res.json())
     .then(res=>{
-        array = res.results
+        albumArray = res.results
         renderDisplay()
     })
     .catch(()=>{
@@ -31,7 +31,7 @@ const submit = () =>{
 submit()
 
 const renderDisplay = () =>{
-    let render = array.map(arr=>{
+    let render = albumArray.map(arr=>{
         return (`
                 <div class="album-info-container"> 
                     <img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
@@ -42,7 +42,7 @@ const renderDisplay = () =>{
 
     contentContainer.innerHTML = render
 
-    let resultText = `<h4>${array.length} results for "${inputBox.value.toUpperCase()}"</h4>`
+    let resultText = `<h4>${albumArray.length} results for "${inputBox.value.toUpperCase()}"</h4>`
     resultContainer.innerHTML = resultText
 }
 
