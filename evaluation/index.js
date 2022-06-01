@@ -9,7 +9,7 @@ let num = albumArray.length - 20
 
 const showMore = () =>{ 
     showMoreBtn.addEventListener('click',()=>{
-        console.log('showmore')
+        console.log('show more')
         if(inputBox.value === "" || !albumArray.length)return
 
         if(-num < albumArray.length){
@@ -40,6 +40,7 @@ const getData = (artist) => {
 
 const submit = () =>{
     submitBtn.addEventListener('click',()=>{
+        console.log('clicked')
         if(inputBox.value === ""){
             alert("type a artist!")
             return
@@ -48,8 +49,6 @@ const submit = () =>{
 
         let artists = inputBox.value
         getData(artists)
-
-        num = albumArray.length - 20
     })
 }
 submit()
@@ -60,7 +59,7 @@ const renderDisplay = () =>{
                 <div class="album-info-container"> 
                     <img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
                     <p>Artist: <b style="color:green">${arr.artistName}</b></p>
-                    <p>Album: <b style="color:green">${arr.collectionName.toUpperCase()}</b></p>
+                    <p>Album: <b style="color:green">${arr.collectionName}</b></p>
                 </div>
             `)}).splice(0,-num).join('')
 
@@ -78,7 +77,6 @@ const inputBoxSubmit = () => {
     inputBox.addEventListener('keypress',(e)=>{
         if(e.keyCode === 13){
             console.log('entered')
-            e.preventDefault()
             let artists = inputBox.value
             getData(artists)
         }
