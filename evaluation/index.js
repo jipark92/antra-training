@@ -34,18 +34,15 @@ const renderDisplay = () =>{
     let render = array.map(arr=>{
         return (`
                 <div class="album-info-container"> 
-                    <ul>
-                        <img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
-                        <p>Artist: <b style="color:green">${arr.artistName}</b></p>
-                        <p>Album Name: <b style="color:red">${arr.collectionName.toUpperCase()}</b></p>
-                    </ul>
+                    <img src=${arr.artworkUrl60} alt="album-picture" class="album-img"/>
+                    <p>Artist:<b style="color:green">${arr.artistName}</b></p>
+                    <p>Album:<b style="color:green">${arr.collectionName.toUpperCase()}</b></p>
                 </div>
-        `)
-    }).join('')
+            `)}).join('')
 
     contentContainer.innerHTML = render
 
-    let resultText = `<h5>${array.length} results for "${inputBox.value}"</h5>`
+    let resultText = `<h4>${array.length} results for "${inputBox.value.toUpperCase()}"</h4>`
     resultContainer.innerHTML = resultText
 }
 
