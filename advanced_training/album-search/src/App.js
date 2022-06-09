@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(artist){
+  getAlbumData(artist){
     fetch(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
       .then(res=>res.json())
       .then(res=>{
@@ -36,7 +36,7 @@ class App extends Component {
             // console.log(e.target.value)
           }}/>
           <button onClick={()=>{
-            this.componentDidMount(this.state.artistName)
+            this.getAlbumData(this.state.artistName)
             this.setState({loading:false})
           }}>SEARCH</button>
         </section>
