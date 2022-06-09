@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
 
-  getAlbumalbumData(artist){
+  getAlbumData(artist){
     this.setState({
       loadingText: "Loading...",
     })
@@ -27,7 +27,7 @@ class App extends Component {
         alert('no artist found')
       })
   }
-  
+
   render(){
     return(
       <div>
@@ -41,17 +41,10 @@ class App extends Component {
             onChange={(e)=>{
               this.setState({artistName: e.target.value})
             }}
-            // onKeyDown={(e)=>{
-            //   e.preventDefault()
-            //   if(e.keyCode === 13){
-            //     this.getAlbumalbumData(this.state.artistName)
-            //     this.setState({loading:false})
-            //   }
-            // }}
             />
           <button onClick={()=>{
             if(this.state.artistName === "")alert('type a artist')
-            this.getAlbumalbumData(this.state.artistName)
+            this.getAlbumData(this.state.artistName)
           }}>SEARCH</button>
         </section>
         <section className='total-result-container'>
