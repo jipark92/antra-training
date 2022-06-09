@@ -17,34 +17,27 @@ class App extends Component {
         this.setState({
           data:res.results,
         })
-        console.log(this.state.data)
       })
   }
 
   render(){
-    // console.log('render called')
     return(
       <div>
         <header className='title-container'>
           <h1>React Album Search</h1>
         </header>
-
         <section className='search-container'>
           <input type='text' placeholder='....' onChange={(e)=>{
-            // console.log(this.state.artistName)
             this.setState({artistName: e.target.value})
-            // console.log(e.target.value)
           }}/>
           <button onClick={()=>{
             this.getAlbumData(this.state.artistName)
             this.setState({loading:false})
           }}>SEARCH</button>
         </section>
-
         <section className='total-result-container'>
-          <p>### / {this.state.data.length} results for "{this.state.artistName}"</p>
+          { this.state.loading ?  "" :<p>{this.state.data.length} results for "{this.state.artistName}"</p>}
         </section>
-
         <section className='album-content-container'>
           {  this.state.loading ? "" :  this.state.data.map((album,i)=>{
             return (
@@ -58,7 +51,6 @@ class App extends Component {
             )
           })}
         </section>
-        
       </div>
     )
   }
