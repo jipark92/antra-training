@@ -5,7 +5,8 @@ class App extends Component {
     super(props);
     this.state = {
       data : [],
-      artistName: ""
+      artistName: "",
+      loading: true
     }
   }
 
@@ -13,7 +14,9 @@ class App extends Component {
     fetch(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
       .then(res=>res.json())
       .then(res=>{
-        this.setState({data:res.results})
+        this.setState({
+          data:res.results,
+        })
         console.log(this.state.data)
       })
   }
@@ -27,22 +30,23 @@ class App extends Component {
         </header>
 
         <section className='search-container'>
-          <input type='text' placeholder='...' onChange={(e)=>{
+          <input type='text' placeholder='....' onChange={(e)=>{
             // console.log(this.state.artistName)
             this.setState({artistName: e.target.value})
             // console.log(e.target.value)
           }}/>
           <button onClick={()=>{
             this.componentDidMount(this.state.artistName)
-          }}>getData</button>
+            this.setState({loading:false})
+          }}>SEARCH</button>
         </section>
 
         <section className='total-result-container'>
-          <p>### / 200 results for "_____"</p>
+          <p>### / {this.state.data.length} results for "{this.state.artistName}"</p>
         </section>
 
         <section className='album-content-container'>
-          {this.state.data.map((album,i)=>{
+          {  this.state.loading ? "loading..."  :  this.state.data.map((album,i)=>{
             return (
             <div  className='album-card' key={i}>
               <img src={album.artworkUrl60} alt="album-pic" className="album-picture"/>
