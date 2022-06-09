@@ -29,7 +29,6 @@
 .total-result-container{
   text-align: center;
   padding: 1rem;
-  border-bottom: 1px solid black;
 }
 
 .album-content-container{
@@ -42,9 +41,10 @@
 }
 
 .album-card{
-  height: 300px;
+  height: 250px;
   width: 150px;
   border: 1px solid black;
+  overflow-y: auto;
 }
 
 .album-picture{

@@ -18,7 +18,7 @@ class App extends Component {
         this.setState({
           loadingText: "Loading...",
           albumData:res.results,
-          loading: false
+          loading: false,
         })
       })
       .catch((err)=>{
@@ -48,8 +48,8 @@ class App extends Component {
             // }}
             />
           <button onClick={()=>{
+            if(this.state.artistName === "")alert('type a artist')
             this.getAlbumalbumData(this.state.artistName)
-
           }}>SEARCH</button>
         </section>
         <section className='total-result-container'>
