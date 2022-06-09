@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container{
+    text-align: center;
+}
+
+.details-container{
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+    text-transform: capitalize;
+}
