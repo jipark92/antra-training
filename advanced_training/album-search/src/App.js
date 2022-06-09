@@ -46,7 +46,7 @@ class App extends Component {
         </section>
 
         <section className='album-content-container'>
-          {  this.state.loading ? "loading..."  :  this.state.data.map((album,i)=>{
+          {  this.state.loading ? "" :  this.state.data.map((album,i)=>{
             return (
             <div  className='album-card' key={i}>
               <img src={album.artworkUrl60} alt="album-pic" className="album-picture"/>
