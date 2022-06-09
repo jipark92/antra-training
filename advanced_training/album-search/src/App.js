@@ -6,7 +6,8 @@ class App extends Component {
     this.state = {
       albumData : [],
       artistName: "",
-      loading: true
+      loading: true,
+      loadingText: ""
     }
   }
 
@@ -15,7 +16,9 @@ class App extends Component {
       .then(res=>res.json())
       .then(res=>{
         this.setState({
+          loadingText: "Loading...",
           albumData:res.results,
+          loading: false
         })
       })
       .catch((err)=>{
@@ -46,14 +49,14 @@ class App extends Component {
             />
           <button onClick={()=>{
             this.getAlbumalbumData(this.state.artistName)
-            this.setState({loading:false})
+
           }}>SEARCH</button>
         </section>
         <section className='total-result-container'>
           { this.state.loading ?  "" :<p>{this.state.albumData.length} results for "{this.state.artistName}"</p>}
         </section>
         <section className='album-content-container'>
-          {this.state.loading ? "..." :  this.state.albumData.map((album,i)=>{
+          {this.state.loading ? this.state.loadingText :  this.state.albumData.map((album,i)=>{
             return (
             <div  className='album-card' key={i}>
               <img src={album.artworkUrl60} alt="album-pic" className="album-picture"/>
