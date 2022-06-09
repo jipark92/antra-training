@@ -4,13 +4,13 @@ class App extends Component {
   constructor (props){
     super(props);
     this.state = {
-      data : []
+      data : [],
+      artistName: ""
     }
   }
 
-
-  componentDidMount(artistName){
-    fetch(`https://itunes.apple.com/search?term=gaga&media=music&entity=album&attribute=artistTerm&limit=200`)
+  componentDidMount(artist){
+    fetch(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
       .then(res=>res.json())
       .then(res=>{
         this.setState({data:res.results})
@@ -28,11 +28,12 @@ class App extends Component {
 
         <section className='search-container'>
           <input type='text' placeholder='...' onChange={(e)=>{
-            console.log(this.state.search)
-            // this.setState({search: e.target.value})
+            // console.log(this.state.artistName)
+            this.setState({artistName: e.target.value})
+            // console.log(e.target.value)
           }}/>
           <button onClick={()=>{
-            // getData(artistName)
+            this.componentDidMount(this.state.artistName)
           }}>getData</button>
         </section>
 
@@ -60,20 +61,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// let albumArray = []
-// let artistName = "";
-
-// const getData =(artist) =>{
-//   console.log('clicked')
-
-//   fetch(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
-//   .then(res=>res.json())
-//   .then(res=>{
-//     albumArray = res.results
-//     console.log(albumArray)
-
-//   })
-// }
-// getData("gaga")
