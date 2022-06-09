@@ -12,11 +12,13 @@ class App extends Component {
   }
 
   getAlbumalbumData(artist){
+    this.setState({
+      loadingText: "Loading...",
+    })
     fetch(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=200`)
       .then(res=>res.json())
       .then(res=>{
         this.setState({
-          loadingText: "Loading...",
           albumData:res.results,
           loading: false,
         })
