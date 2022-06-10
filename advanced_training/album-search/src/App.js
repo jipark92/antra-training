@@ -8,7 +8,7 @@ class App extends Component {
       artistName: "",
       loading: true,
       loadingText: "",
-      showMore: 5
+      showMore: 7
     }
   }
 
@@ -32,7 +32,7 @@ class App extends Component {
   loadMore(){
     if(!this.state.artistName)return
     this.setState({
-      showMore: this.state.showMore + 5
+      showMore: this.state.showMore + 7
     })
   }
 
