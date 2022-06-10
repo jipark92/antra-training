@@ -1,3 +1,4 @@
+import Button from "./Button";
 
 export default function AboutMe() {
     return (
@@ -23,6 +24,9 @@ export default function AboutMe() {
                 <p>Favorite fonts: Roboto</p>
                 <p>Loves to learn new things</p>
             </section>
+
+
+            <button className="contact-btn">Contact</button>
         </div>
     )
 }

@@ -30,11 +30,16 @@
     gap: 1rem;
 }
 
-
 .personal-info{
     border: 1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.contact-btn{
+    width: 25%;
+    border: 2px solid black;
+    color: black;
 }
