@@ -8,12 +8,11 @@ class App extends Component {
       artistName: "",
       loading: true,
       loadingText: "",
-      showMore: 0
+      showMore: 5
     }
   }
 
   getAlbumData(artist){
-    console.log('getdata lcicked')
     this.setState({
       loadingText: "Loading...",
     })
