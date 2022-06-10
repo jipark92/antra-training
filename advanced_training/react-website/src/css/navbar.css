@@ -8,13 +8,13 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid red;
+  background-color: gray;
 }
 
 .nav-container{
   display: flex;
   gap: 1rem;
-  border: 1px solid blue;
+  position:sticky
 }
 
 .nav-container a {

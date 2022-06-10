@@ -1,5 +1,5 @@
 .portfolio-container{
-    /* height: 50vh; */
+    background-color: darkgray;
 }
 
 .portfolio-header{
@@ -15,15 +15,13 @@
     gap: 1rem;
     padding: 2rem;
     height: 100%;
-    border: 1px solid black;
 }
 
 .more-projects-container{
-    border: 1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .more-projects-container button{

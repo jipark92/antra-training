@@ -11,6 +11,7 @@ import './css/introduction.css'
 import './css/aboutme.css'
 import './css/summary.css'
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
