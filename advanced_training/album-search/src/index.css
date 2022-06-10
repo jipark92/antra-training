@@ -2,6 +2,7 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  background-color: bisque;
 }
 
 .title-container{
@@ -26,6 +27,11 @@
   padding: 0.2rem;
 }
 
+.search-container button:hover{
+  background-color: white;
+
+}
+
 .total-result-container{
   text-align: center;
   padding: 1rem;
@@ -38,12 +44,13 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  
 }
 
 .album-card{
   height: 250px;
   width: 150px;
-  border: 1px solid black;
+  border: 2px solid rgb(26, 190, 182);
   overflow-y: auto;
 }
 
@@ -56,4 +63,9 @@
   width: 100%;
   font-size: 1.2rem;
   padding: 0.2rem;
+}
+
+.show-more-btn:hover{
+  cursor: pointer;
+  background-color: white;
 }

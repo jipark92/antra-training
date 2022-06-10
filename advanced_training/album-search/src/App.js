@@ -74,7 +74,7 @@ class App extends Component {
             )
           }).splice(0,this.state.showMore)}
         </section>
-        <button  className='show-more-btn' onClick={()=>{this.loadMore()}}>show more</button>
+        <button  className='show-more-btn' onClick={()=>{this.loadMore()}}>SHOW MORE</button>
       </div>
     )
   }
