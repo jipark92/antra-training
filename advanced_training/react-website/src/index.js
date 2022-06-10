@@ -7,6 +7,7 @@ import './css/contactform.css'
 import './css/button.css'
 import './css/portfolio.css'
 import './css/portfoliocard.css'
+import './css/aboutme.css'
 import './css/summary.css'
 import App from './App';
 
