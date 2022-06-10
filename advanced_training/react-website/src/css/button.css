@@ -4,4 +4,6 @@ button{
     background-color: gray;
     padding: 0.6rem;
     font-size: 1.1rem;
+    width: 100%;
 }
+

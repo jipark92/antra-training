@@ -2,7 +2,7 @@
 
 export default function Button(props) {
     return (
-        <div>
+        <div className={props.classN}>
             <button>{props.buttonText}</button>
         </div>
     )

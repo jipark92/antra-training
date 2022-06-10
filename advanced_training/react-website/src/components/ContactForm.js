@@ -19,6 +19,7 @@ export default function ContactForm() {
             <textarea rows={3}/>
             
             <Button
+                classN="submit-btn"
                 buttonText="Submit"
             />
         </form>

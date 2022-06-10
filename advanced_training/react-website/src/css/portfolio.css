@@ -1,0 +1,32 @@
+.portfolio-container{
+    /* height: 50vh; */
+}
+
+.portfolio-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.projects-container{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid black;
+
+}
+
+.more-projects-container{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.more-projects-container button{
+    width: 25%;
+}
