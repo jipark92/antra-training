@@ -7,6 +7,7 @@ import './css/contactform.css'
 import './css/button.css'
 import './css/portfolio.css'
 import './css/portfoliocard.css'
+import './css/summary.css'
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

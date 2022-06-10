@@ -1,0 +1,16 @@
+.summary-container{
+    background-color: black;
+    border: 1px solid red;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5rem;
+    color: white;
+}
+
+.summary-container section{
+    border: 1px solid blue;
+    display: flex;
+    align-items: flex-start;
+}
