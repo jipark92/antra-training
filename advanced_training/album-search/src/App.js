@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   loadMore(){
-    if(this.state.artistName === "")return
+    if(!this.state.artistName)return
     this.setState({
       showMore: this.state.showMore + 5
     })
