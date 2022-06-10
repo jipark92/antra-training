@@ -56,7 +56,7 @@ class App extends Component {
           }}>SEARCH</button>
         </section>
         <section className='total-result-container'>
-          { this.state.loading ?  "" :<p>{this.state.albumData.length} results for "{this.state.artistName}"</p>}
+          { this.state.loading ?  "" :<p>{this.state.showMore}  / {this.state.albumData.length} results for "{this.state.artistName}"</p>}
         </section>
         <section className='album-content-container'>
           {this.state.loading ? this.state.loadingText :  this.state.albumData.map((album,i)=>{
