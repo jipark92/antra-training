@@ -8,7 +8,7 @@ class App extends Component {
       artistName: "",
       loading: true,
       loadingText: "",
-      showMore: 7
+      showMore: 5
     }
   }
 
@@ -31,8 +31,12 @@ class App extends Component {
 
   loadMore(){
     if(!this.state.artistName)return
+    if(this.state.showMore > this.state.albumData.length){
+      alert('end of page')
+      return
+    }
     this.setState({
-      showMore: this.state.showMore + 7
+      showMore: this.state.showMore + 5
     })
   }
 
