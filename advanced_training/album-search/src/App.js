@@ -7,11 +7,13 @@ class App extends Component {
       albumData : [],
       artistName: "",
       loading: true,
-      loadingText: ""
+      loadingText: "",
+      showMore: 0
     }
   }
 
   getAlbumData(artist){
+    console.log('getdata lcicked')
     this.setState({
       loadingText: "Loading...",
     })
@@ -26,6 +28,13 @@ class App extends Component {
       .catch((err)=>{
         alert('no artist found')
       })
+  }
+
+  loadMore(){
+    this.setState({
+      showMore: this.state.showMore + 5
+    })
+    console.log(this.state.showMore)
   }
 
   render(){
@@ -61,8 +70,9 @@ class App extends Component {
               <p>Album Name: {album.collectionName}</p>
             </div>
             )
-          })}
+          }).splice(0,this.state.showMore)}
         </section>
+        <button  className='show-more-btn' onClick={()=>{this.loadMore()}}>show more</button>
       </div>
     )
   }
