@@ -30,10 +30,10 @@ class App extends Component {
   }
 
   loadMore(){
+    if(this.state.artistName === "")return
     this.setState({
       showMore: this.state.showMore + 5
     })
-    console.log(this.state.showMore)
   }
 
   render(){
