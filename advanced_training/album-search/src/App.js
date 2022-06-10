@@ -51,7 +51,10 @@ class App extends Component {
             }}
             />
           <button onClick={()=>{
-            if(this.state.artistName === "")alert('type a artist')
+            if(!this.state.artistName){
+              alert('type a artist')
+              return
+            }
             this.getAlbumData(this.state.artistName)
           }}>SEARCH</button>
         </section>
