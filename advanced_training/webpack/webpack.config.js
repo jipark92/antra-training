@@ -1,4 +1,6 @@
 const path = require('path');
+import css from "file.css";
+
 
 module.exports = {
     entry: './src/index.js',
@@ -21,5 +23,13 @@ module.exports = {
             }
             }
         ]
-    }
+    },
+    module: {
+            rules: [
+            {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
 };
