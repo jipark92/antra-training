@@ -1,6 +1,4 @@
 const path = require('path');
-import css from "file.css";
-
 
 module.exports = {
     entry: './src/index.js',

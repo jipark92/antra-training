@@ -1,3 +1,6 @@
+import css from "file.css";
+
+
 function component() {
     const element = document.createElement('div');
 
