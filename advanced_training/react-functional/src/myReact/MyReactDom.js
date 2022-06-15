@@ -38,11 +38,11 @@ const render = (
 
         // Assignment if it is function component
         if (typeof type === "function") {
-            console.log("fnProps", type);
             const curFnReactElement = type(props);
-            console.log("function", curFnReactElement);
             render(curFnReactElement, domElement);
             return;
+        } else {
+            
         }
 
         /// else 

@@ -6,16 +6,16 @@ import App from './App';
 //import reportWebVitals from './reportWebVitals';
 
 const FunctionComp = (prop) =>{
- return ( 
-  <div>
-      <button>Button</button>
-  </div>
- )
+  return ( 
+    <div>
+        <button onClick={()=>console.log('clicked')}>Button</button>
+    </div>
+  )
 }
 
 const reactE = <section>
   <header>Counter:0</header>
-  <button>+</button><button>-</button>
+  {/* <button onClick={()=>console.log('clicked')}>+</button><button>-</button> */}
 </section>;
 
 const Button = (props) => {
