@@ -5,6 +5,14 @@ import './index.css';
 import App from './App';
 //import reportWebVitals from './reportWebVitals';
 
+const FunctionComp = (prop) =>{
+ return ( 
+  <div>
+      <button>Button</button>
+  </div>
+ )
+}
+
 const reactE = <section>
   <header>Counter:0</header>
   <button>+</button><button>-</button>
@@ -50,8 +58,9 @@ console.log("Counter", Counter)
 console.log("<Counter/>", <Counter />)
 
 
-ReactDOM.render(
-  <Counter title="MyCounter" />,
+MyReactDOM.render(
+  <FunctionComp/>,
+  // <Counter title="MyCounter" />,
   document.getElementById('root')
 );
 

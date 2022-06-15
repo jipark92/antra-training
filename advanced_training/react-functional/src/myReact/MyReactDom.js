@@ -16,15 +16,15 @@ const render = (
         const { type, props } = reactElement;
         /// if type is ClassCompoennt
         if (type.prototype instanceof React.Component) {
-            // console.log('class componnent props', props)
+            console.log('class componnent props', props)
             /// Mounting
             /// constructor
             const curInstance = new type(props);
-            // console.log("curInstance", curInstance)
+            console.log("curInstance", curInstance)
 
             // getDerivedStateFromProps
             curInstance.state = type.getDerivedStateFromProps(props, curInstance.state)
-            // console.log("curInstance", curInstance)
+            console.log("curInstance", curInstance)
 
             // render
             const curReactElement = curInstance.render();
@@ -37,15 +37,13 @@ const render = (
         }
 
         // Assignment if it is function component
-        var template = '<h1>Hello world!</h1>';
-
-        var render = function (template, selector) {
-            var node = document.querySelector(selector);
-            if (!node) return;
-            node.innerHTML = template;
-        };
-        render(template, '#main');
-
+        if (typeof type === "function") {
+            console.log("fnProps", type);
+            const curFnReactElement = type(props);
+            console.log("function", curFnReactElement);
+            render(curFnReactElement, domElement);
+            return;
+        }
 
         /// else 
         curDom = document.createElement(type);
