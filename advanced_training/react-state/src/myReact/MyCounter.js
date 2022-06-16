@@ -17,7 +17,7 @@ export default function Counter() {
 
     if(counter > 5){
         setTimeout(() => {
-            alert('alert after 5 counter')            
+            alert(`counter is at ${counter}`)
         }, 5000);
     }
 
