@@ -22,6 +22,7 @@ export default function Effect() {
         getData()
     },[refresher]) 
 
+    //example function
     const getData = async ()=>{
         const url = await fetch ('http://localhost:3001/')
         const data = await url.json()
