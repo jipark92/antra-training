@@ -15,7 +15,6 @@ function App() {
   });
 
   const clearAllBtn = () => {
-    console.log("cleared");
     setAll(false);
     setKosher(false);
     setNoCelery(false);
@@ -40,7 +39,6 @@ function App() {
             value="select all"
             checked={all}
             onChange={() => {
-              console.log("all", all);
               setAll((prevAll) => !prevAll);
             }}
           />
@@ -55,7 +53,6 @@ function App() {
             value="kosher"
             checked={kosher}
             onChange={() => {
-              console.log("kosher", kosher);
               setKosher((prevKosher) => !prevKosher);
               setAll(false);
             }}
@@ -71,7 +68,6 @@ function App() {
             value="no celery"
             checked={noCelery}
             onChange={() => {
-              console.log("no celery", noCelery);
               setNoCelery((prevNoCelery) => !prevNoCelery);
               setAll(false);
             }}
@@ -87,7 +83,6 @@ function App() {
             value="no egg"
             checked={noEgg}
             onChange={() => {
-              console.log("no egg", noEgg);
               setNoEgg((prevNoEgg) => !prevNoEgg);
               setAll(false);
             }}
