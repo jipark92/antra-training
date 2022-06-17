@@ -1,8 +1,11 @@
+import {useState} from 'react'
+import Effect from './components/Effect';
 
 function App() {
+
   return (
     <div className="App">
-      app
+      <Effect/>
     </div>
   );
 }
