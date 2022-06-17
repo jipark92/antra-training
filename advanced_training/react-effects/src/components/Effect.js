@@ -7,16 +7,15 @@ export default function Effect() {
 
     //examples
 
-    //renders on every change
-    // useEffect(()=>{
-    //     getData()
-    // })
+    //renders on every change //
+    useEffect(()=>{
+        getData()
+    })
 
     // //renders only once
-    // useEffect(()=>{
-    //     getData()
-
-    // },[])
+    useEffect(()=>{
+        getData()
+    },[])
     
     // //render on state change
     useEffect(()=>{
