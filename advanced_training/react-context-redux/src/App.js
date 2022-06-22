@@ -3,7 +3,8 @@ import {Provider} from 'react-redux'
 import counterRedux from './redux/counterRedux'
 import BuyStockFn from './component/buystock/BuyStockFn';
 import { BuyStockProvider } from './context/BuyStockContext';
-
+import BuyStockClass from './component/buystock/BuyStockClass';
+import CounterClass from './component/counter/CounterClass';
 
 function App() {
   return (
@@ -13,10 +14,14 @@ function App() {
           <CounterFn/>
         </Provider>
 
+        <CounterClass/>
+
         {/* context */}
         <BuyStockProvider>
           <BuyStockFn/>
         </BuyStockProvider>
+
+        <BuyStockClass/>
     </div>
   );
 }

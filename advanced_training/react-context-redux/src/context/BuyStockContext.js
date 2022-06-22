@@ -1,21 +1,15 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, Component } from 'react';
+import useCounter from '../hooks/useCounter'
+
 export const BuyStockContext = createContext(null);
 
 export const BuyStockProvider = ({children}) => {
 
-    const [buyStockCount, setBuyStockCount] = useState(0)
-
-    const subtractStock = () =>{
-        setBuyStockCount(buyStockCount - 1)
-    }
-
-    const addStock = () =>{
-        setBuyStockCount(buyStockCount + 1)
-    }
+    const [sub,add,counter] = useCounter()
 
     return(
-        <BuyStockContext.Provider value={[buyStockCount, addStock, subtractStock]}>
+        <BuyStockContext.Provider value={[sub, add, counter]}>
             {children}
         </BuyStockContext.Provider>
-    )
+    )   
 }

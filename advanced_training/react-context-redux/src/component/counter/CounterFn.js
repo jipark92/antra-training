@@ -16,7 +16,7 @@ export default function CounterFn() {
     }
     return (
         <div>
-            <h1 style={{display:"flex", justifyContent:"center"}}>CounterFn<CounterNumber/></h1>
+            <h1 style={{display:"flex", justifyContent:"center"}}>Redux CounterFn<CounterNumber/></h1>
             <p>{counter}</p>
             <button onClick={sub}>-</button>
             <button onClick={add}>+</button>
