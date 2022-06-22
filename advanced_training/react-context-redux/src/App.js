@@ -12,16 +12,15 @@ function App() {
         {/* redux */}
         <Provider store={counterRedux}>
           <CounterFn/>
+          <CounterClass/>
         </Provider>
-
-        <CounterClass/>
 
         {/* context */}
         <BuyStockProvider>
           <BuyStockFn/>
+          <BuyStockClass/>
         </BuyStockProvider>
 
-        <BuyStockClass/>
     </div>
   );
 }
