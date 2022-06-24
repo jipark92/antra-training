@@ -8,16 +8,13 @@ function usersFetch(){
     )
 }
 
-function* workGetUsersFetch(){
-    const users = yield call(usersFetch)
-    yield put({type: GET_ALBUM_SUCCESS, users})
+function* workGetAlbumFetch(){
+    const album = yield call(usersFetch)
+    yield put({type: GET_ALBUM_SUCCESS, album})
 }
 
 function* mySaga(){
-    yield takeEvery(GET_ALBUM_FETCH, workGetUsersFetch)
+    yield takeEvery(GET_ALBUM_FETCH, workGetAlbumFetch)
 }
 
 export default mySaga
-// return fetch('https://jsonplaceholder.typicode.com/users')
-
-// return fetch('https://itunes.apple.com/search?term=gaga&media=music&entity=album&attribute=artistTerm&limit=200')

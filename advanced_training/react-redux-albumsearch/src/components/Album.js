@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 export default function Album() {
 
-    const users = useSelector(state => state.myFirstReducer.users)
+    const users = useSelector(state => state.myFirstReducer.album)
 
     const showUsers = users.map((user,i)=>{
         return (
