@@ -19,7 +19,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="col-auto">
-                                <button type="submit" className="btn btn-outline-light mb-4">
+                                <button type="submit" className="btn btn-outline-light mb-4" disabled>
                                 Subscribe
                                 </button>
                             </div>
