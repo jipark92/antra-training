@@ -1,6 +1,6 @@
-export const GET_USERS_FETCH = 'GET_USERS_FETCH'
-export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS"
+export const GET_ALBUM_FETCH = 'GET_ALBUM_FETCH'
+export const GET_ALBUM_SUCCESS = "GET_ALBUM_SUCCESS"
 
 export const getUsersFetch = () =>({
-    type: GET_USERS_FETCH
+    type: GET_ALBUM_FETCH
 })
