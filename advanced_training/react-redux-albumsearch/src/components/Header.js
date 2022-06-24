@@ -6,9 +6,9 @@ export default function Header() {
             <Container>
             <Navbar.Brand href="#home">Antra React Redux Album Search</Navbar.Brand>
             <Nav className="d-flex flex-row">
-            <Nav.Link href="#home">HOME</Nav.Link>
-            <Nav.Link href="#features">CONTACT</Nav.Link>
-            <Nav.Link href="#pricing">FAQ</Nav.Link>
+            {/* <Nav.Link href="#home">HOME</Nav.Link>
+            <Nav.Link href="#features" disabled>CONTACT</Nav.Link>
+            <Nav.Link href="#pricing" disabled>FAQ</Nav.Link> */}
             </Nav>
             </Container>
         </Navbar>
