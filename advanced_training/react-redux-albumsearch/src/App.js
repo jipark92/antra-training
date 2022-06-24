@@ -1,4 +1,5 @@
 import Content from './components/Content';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Search from './components/Search';
 
@@ -8,6 +9,7 @@ function App() {
       <Header/>
       <Search/>
       <Content/>
+      <Footer/>
     </div>
   );
 }

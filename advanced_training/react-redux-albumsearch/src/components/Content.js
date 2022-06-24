@@ -2,7 +2,7 @@ import Album from "./Album";
 
 export default function Content() {
     return (
-        <div className="m-5">
+        <div className="content-container m-5 p-5 border border-primary">
             <Album/>
         </div>
     )
