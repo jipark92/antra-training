@@ -4,8 +4,7 @@ import { GET_ALBUM_FETCH, GET_ALBUM_SUCCESS} from './actions'
 function albumsFetch(){
     return fetch('https://itunes.apple.com/search?term=gaga&media=music&entity=album&attribute=artistTerm&limit=200')
     .then(res=>res.json())
-    .then(res=>res.results
-    )
+    .then(res=>res.results)
 }
 
 function* workGetAlbumFetch(){
