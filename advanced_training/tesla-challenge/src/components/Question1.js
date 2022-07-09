@@ -42,15 +42,11 @@ export default function Question1() {
 
     const getTable = teslaArr
         .sort((a, b) => {
-            if (a.region < b.region) {
-                return 1;
-            } else {
-                return -1;
-            }
+            if (a.region < b.region) return 1;
+            return -1;
         })
         .map((data, i) => {
             const { region, model, sales } = data;
-            // console.log(teslaArr)
             return (
                 <tr key={i}>
                     <td>{region}</td>
@@ -68,21 +64,6 @@ export default function Question1() {
                     <th>Model</th>
                     <th>Sales</th>
                 </tr>
-                {/* <tr>
-                    <td>US</td>
-                    <td>SUM</td>
-                    <td>{sum.us}</td>
-                </tr>
-                <tr>
-                    <td>EU</td>
-                    <td>SUM</td>
-                    <td>{sum.eu}</td>
-                </tr>
-                <tr>
-                    <td>CA</td>
-                    <td>SUM</td>
-                    <td>{sum.ca}</td>
-                </tr> */}
                 {getTable}
             </tbody>
         </table>
