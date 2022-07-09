@@ -1,19 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import teslaData from "../teslaData";
 
 export default function Question1() {
-    const getTable = teslaData.map((data, i) => {
-        const { region, model, sales } = data;
-        return (
-            <tr key={i}>
-                <td>{region}</td>
-                <td>{model}</td>
-                <td>{sales}</td>
-            </tr>
-        );
-    });
+    const [teslaArr, setTeslaArr] = useState(teslaData);
 
-    let sum = teslaData.reduce(
+    let sum = teslaArr.reduce(
         (total, data) => {
             const { region, sales } = data;
             if (region === "US") total.us += sales;
@@ -24,19 +15,60 @@ export default function Question1() {
         {
             us: 0,
             eu: 0,
-            ca: 0
+            ca: 0,
         }
     );
 
+    useEffect(() => {
+        setTeslaArr([
+            ...teslaArr,
+            {
+                region: "US",
+                model: "SUM",
+                sales: sum.us,
+            },
+            {
+                region: "EU",
+                model: "SUM",
+                sales: sum.eu,
+            },
+            {
+                region: "CA",
+                model: "SUM",
+                sales: sum.ca,
+            },
+        ]);
+    }, []);
+
+    const getTable = teslaArr
+        .sort((a, b) => {
+            if (a.region < b.region) {
+                return 1;
+            } else {
+                return -1;
+            }
+        })
+        .map((data, i) => {
+            const { region, model, sales } = data;
+            // console.log(teslaArr)
+            return (
+                <tr key={i}>
+                    <td>{region}</td>
+                    <td>{model}</td>
+                    <td>{sales}</td>
+                </tr>
+            );
+        });
+
     return (
-        <table border="1">
+        <table border='1'>
             <tbody>
                 <tr>
                     <th>Region</th>
                     <th>Model</th>
                     <th>Sales</th>
                 </tr>
-                <tr>
+                {/* <tr>
                     <td>US</td>
                     <td>SUM</td>
                     <td>{sum.us}</td>
@@ -50,7 +82,7 @@ export default function Question1() {
                     <td>CA</td>
                     <td>SUM</td>
                     <td>{sum.ca}</td>
-                </tr>
+                </tr> */}
                 {getTable}
             </tbody>
         </table>
