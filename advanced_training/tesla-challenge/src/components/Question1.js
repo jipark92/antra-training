@@ -26,19 +26,18 @@ export default function Question1() {
         {
             us: 0,
             eu: 0,
-            ca: 0,
+            ca: 0
         }
     );
 
     return (
-        <table border='1'>
+        <table border="1">
             <tbody>
                 <tr>
                     <th>Region</th>
                     <th>Model</th>
                     <th>Sales</th>
                 </tr>
-                {getTable()}
                 <tr>
                     <td>US</td>
                     <td>SUM</td>
@@ -54,6 +53,7 @@ export default function Question1() {
                     <td>SUM</td>
                     <td>{sum.ca}</td>
                 </tr>
+                {getTable()}
             </tbody>
         </table>
     );
