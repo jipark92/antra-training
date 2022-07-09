@@ -8,9 +8,9 @@ export default function Question1() {
             const {region,model,sales} = data
             return(
                 <tr key={i}>
-                    <th>{region}</th>
-                    <th>{model}</th>
-                    <th>{sales}</th>
+                    <td>{region}</td>
+                    <td>{model}</td>
+                    <td>{sales}</td>
                 </tr>
             )
         })
@@ -36,28 +36,28 @@ export default function Question1() {
 
     return (
         <table border="1">
-        <tbody>
-            <tr>
-                <th>Region</th>
-                <th>Model</th>
-                <th>Sales</th>
-            </tr>
-            {getTable()}
-            <tr>
-                <th>US</th>
-                <th>SUM</th>
-                <th>{sum.us}</th>
-            </tr>
-            <tr>
-                <th>EU</th>
-                <th>SUM</th>
-                <th>{sum.eu}</th>
-            </tr>
-            <tr>
-                <th>CA</th>
-                <th>SUM</th>
-                <th>{sum.ca}</th>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>Region</th>
+                    <th>Model</th>
+                    <th>Sales</th>
+                </tr>
+                {getTable()}
+                <tr>
+                    <td>US</td>
+                    <td>SUM</td>
+                    <td>{sum.us}</td>
+                </tr>
+                <tr>
+                    <td>EU</td>
+                    <td>SUM</td>
+                    <td>{sum.eu}</td>
+                </tr>
+                <tr>
+                    <td>CA</td>
+                    <td>SUM</td>
+                    <td>{sum.ca}</td>
+                </tr>
             </tbody>
         </table>
     );
