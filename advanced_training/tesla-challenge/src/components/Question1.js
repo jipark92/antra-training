@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import teslaData from "../teslaData";
 
-export default function Question1() {
+export default function Question1(props) {
+    const { teslaData } = props;
+
     const [teslaArr, setTeslaArr] = useState(teslaData);
 
     let sum = teslaArr.reduce(
@@ -15,7 +16,7 @@ export default function Question1() {
         {
             us: 0,
             eu: 0,
-            ca: 0,
+            ca: 0
         }
     );
 
@@ -25,18 +26,18 @@ export default function Question1() {
             {
                 region: "US",
                 model: "SUM",
-                sales: sum.us,
+                sales: sum.us
             },
             {
                 region: "EU",
                 model: "SUM",
-                sales: sum.eu,
+                sales: sum.eu
             },
             {
                 region: "CA",
                 model: "SUM",
-                sales: sum.ca,
-            },
+                sales: sum.ca
+            }
         ]);
     }, []);
 
@@ -57,7 +58,7 @@ export default function Question1() {
         });
 
     return (
-        <table border='1'>
+        <table border="1">
             <tbody>
                 <tr>
                     <th>Region</th>

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import teslaData from "../teslaData";
+import React, { useState } from "react";
 
-export default function Question2() {
+export default function Question2(props) {
+    const { teslaData } = props;
+
     const [regionSelect, setRegionSelect] = useState("ALL");
     const [modelSelect, setModelSelect] = useState("ALL");
 
