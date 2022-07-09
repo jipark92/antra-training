@@ -7,7 +7,6 @@
 .App{
   display:flex;
   flex-direction: column;
-
 }
 
 .option-container{
@@ -16,4 +15,3 @@
   align-items: center;
   height:3rem;
 }
-
