@@ -7,6 +7,10 @@ export default function Question2(props) {
     const [modelSelect, setModelSelect] = useState("ALL");
 
     const filteredTable = teslaData
+        .sort((a, b) => {
+            if (a.region < b.region) return 1;
+            return -1;
+        })
         .filter((data) => {
             const { region, model } = data;
             if (regionSelect === "ALL" && modelSelect === "ALL") return data;
@@ -26,8 +30,8 @@ export default function Question2(props) {
 
     return (
         <div className="App">
-            <div className="option-container">
-                <label htmlFor="region">Region</label>
+            <form className="option-container">
+                <label htmlFor="region">Region: </label>
                 <select
                     name="region"
                     id="region"
@@ -40,7 +44,7 @@ export default function Question2(props) {
                     <option value="EU">EU</option>
                     <option value="CA">CA</option>
                 </select>
-                <label htmlFor="model">Model</label>
+                <label htmlFor="model">Model: </label>
                 <select
                     name="model"
                     id="model"
@@ -54,7 +58,7 @@ export default function Question2(props) {
                     <option value="C">C</option>
                     <option value="D">D</option>
                 </select>
-            </div>
+            </form>
             <table border="1">
                 <tbody>
                     <tr>

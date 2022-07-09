@@ -1,17 +1,25 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App{
-  display:flex;
+.App {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 }
 
-.option-container{
+.option-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:3rem;
+  padding: 1rem;
+}
+
+th,
+td {
+  padding: 0 1rem 0 1rem;
 }
