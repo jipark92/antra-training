@@ -2,18 +2,16 @@ import React from "react";
 import teslaData from "../teslaData";
 
 export default function Question1() {
-    const getTable = () => {
-        return teslaData.map((data, i) => {
-            const { region, model, sales } = data;
-            return (
-                <tr key={i}>
-                    <td>{region}</td>
-                    <td>{model}</td>
-                    <td>{sales}</td>
-                </tr>
-            );
-        });
-    };
+    const getTable = teslaData.map((data, i) => {
+        const { region, model, sales } = data;
+        return (
+            <tr key={i}>
+                <td>{region}</td>
+                <td>{model}</td>
+                <td>{sales}</td>
+            </tr>
+        );
+    });
 
     let sum = teslaData.reduce(
         (total, data) => {
@@ -53,7 +51,7 @@ export default function Question1() {
                     <td>SUM</td>
                     <td>{sum.ca}</td>
                 </tr>
-                {getTable()}
+                {getTable}
             </tbody>
         </table>
     );
