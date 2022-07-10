@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function Question2(props) {
+
     const { teslaData } = props;
 
     const [regionSelect, setRegionSelect] = useState("ALL");

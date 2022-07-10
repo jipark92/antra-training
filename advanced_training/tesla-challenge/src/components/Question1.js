@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 export default function Question1(props) {
-    const { teslaData } = props;
 
-    const [teslaArr, setTeslaArr] = useState(teslaData);
+    const [teslaArr, setTeslaArr] = useState(props.teslaData);
 
     let sum = teslaArr.reduce(
         (total, data) => {
