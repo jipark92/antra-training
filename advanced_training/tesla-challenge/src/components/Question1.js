@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 export default function Question1(props) {
-
     const [teslaArr, setTeslaArr] = useState(props.teslaData);
 
     let sum = teslaArr.reduce(
@@ -58,14 +57,14 @@ export default function Question1(props) {
 
     return (
         <table border="1">
-            <tbody>
+            <thead>
                 <tr>
                     <th>Region</th>
                     <th>Model</th>
                     <th>Sales</th>
                 </tr>
-                {getTable}
-            </tbody>
+            </thead>
+            <tbody>{getTable}</tbody>
         </table>
     );
 }

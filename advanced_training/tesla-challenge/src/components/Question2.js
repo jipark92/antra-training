@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function Question2(props) {
-
     const { teslaData } = props;
 
     const [regionSelect, setRegionSelect] = useState("ALL");
@@ -61,14 +60,14 @@ export default function Question2(props) {
                 </select>
             </form>
             <table border="1">
-                <tbody>
+                <thead>
                     <tr>
                         <th>Region</th>
                         <th>Model</th>
                         <th>Sales</th>
                     </tr>
-                    {filteredTable}
-                </tbody>
+                </thead>
+                <tbody>{filteredTable}</tbody>
             </table>
         </div>
     );
